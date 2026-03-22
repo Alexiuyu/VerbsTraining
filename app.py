@@ -570,7 +570,7 @@ else:
         st.markdown("---")
         st.info("💡 **Consejo:** Cuando veas '/' en la respuesta, puedes escribir cualquiera de las opciones (ej: 'learnt' o 'learned')")
         st.info("⚠️ **Excepción:** 'was/were' debe escribirse completo con la barra")
-        st.markdown("⌨️ **Enter** cambia de casilla | **Tab** también funciona")
+        st.markdown("⌨️ **Enter** envía el formulario | **Tab** cambia de casilla")
 
     else:
         # Barra de progreso
