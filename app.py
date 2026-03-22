@@ -480,48 +480,50 @@ if st.session_state.nivel_seleccionado is None:
     
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # Botones de nivel centrados
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
+    # Dos columnas: cada una con botón + características debajo
+    col_nivel1, col_nivel2 = st.columns(2)
+    
+    with col_nivel1:
+        st.markdown("""
+        <div style='text-align: center; padding: 20px; background-color: #e8f5e9; border-radius: 15px; margin: 10px;'>
+            <h3 style='color: #4CAF50;'>📘 Nivel 1º-2º ESO</h3>
+        </div>
+        """, unsafe_allow_html=True)
         
-        col_btn1, col_btn2 = st.columns(2)
+        if st.button("📘 1º-2º ESO", use_container_width=True, key="btn_nivel_1_2", type="primary"):
+            seleccionar_nivel("1-2")
+            st.rerun()
         
-        with col_btn1:
-            if st.button("📘 1º-2º ESO", use_container_width=True, key="btn_nivel_1_2"):
-                seleccionar_nivel("1-2")
-                st.rerun()
+        st.markdown("""
+        <div style='text-align: center; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
+            <p style='color: #333;'><strong>✅ 65 verbos</strong> esenciales</p>
+            <p style='color: #333;'>✅ Los más comunes y utilizados</p>
+            <p style='color: #333;'>✅ Ideal para empezar</p>
+            <p style='color: #333;'>✅ Verbos del día a día</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col_nivel2:
+        st.markdown("""
+        <div style='text-align: center; padding: 20px; background-color: #fff3e0; border-radius: 15px; margin: 10px;'>
+            <h3 style='color: #FF9800;'>📙 Nivel 3º-4º ESO</h3>
+        </div>
+        """, unsafe_allow_html=True)
         
-        with col_btn2:
-            if st.button("📙 3º-4º ESO", use_container_width=True, key="btn_nivel_3_4"):
-                seleccionar_nivel("3-4")
-                st.rerun()
+        if st.button("📙 3º-4º ESO", use_container_width=True, key="btn_nivel_3_4", type="primary"):
+            seleccionar_nivel("3-4")
+            st.rerun()
         
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown("""
+        <div style='text-align: center; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
+            <p style='color: #333;'><strong>✅ 75 verbos</strong> (incluye 1º-2º)</p>
+            <p style='color: #333;'>✅ Verbos más avanzados</p>
+            <p style='color: #333;'>✅ Más experiencia requerida</p>
+            <p style='color: #333;'>✅ Verbos menos comunes</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("<br><br>", unsafe_allow_html=True)
-    
-    # Información de cada nivel
-    col_info1, col_info2 = st.columns(2)
-    
-    with col_info1:
-        st.markdown("""
-        ### 📘 Nivel 1º-2º ESO
-        - ✅ **65 verbos** esenciales
-        - ✅ Los más comunes y utilizados
-        - ✅ Ideal para empezar
-        - ✅ Verbos del día a día
-        """)
-    
-    with col_info2:
-        st.markdown("""
-        ### 📙 Nivel 3º-4º ESO
-        - ✅ **75 verbos** (incluye todos los de 1º-2º)
-        - ✅ Verbos más avanzados
-        - ✅ Para estudiantes con más experiencia
-        - ✅ Incluye verbos menos comunes
-        """)
-    
     st.markdown("---")
     st.info("⌨️ **Consejo:** Enter cambia de casilla | Tab también funciona")
 
