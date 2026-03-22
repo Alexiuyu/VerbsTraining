@@ -525,7 +525,7 @@ if st.session_state.nivel_seleccionado is None:
     
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("---")
-    st.info("⌨️ **Consejo:** Enter cambia de casilla | Tab también funciona")
+    st.info("⌨️ **Consejo:** Enter envía el formulario | Tab cambia de casilla")
 
 # ==================== PANTALLA DE JUEGO ====================
 else:
