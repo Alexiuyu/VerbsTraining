@@ -495,7 +495,7 @@ if st.session_state.nivel_seleccionado is None:
             st.rerun()
         
         st.markdown("""
-        <div style='text-align: center; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
+        <div style='text-align: left; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
             <p style='color: #333;'><strong>✅ 65 verbos</strong> esenciales</p>
             <p style='color: #333;'>✅ Los más comunes y utilizados</p>
             <p style='color: #333;'>✅ Ideal para empezar</p>
@@ -515,8 +515,8 @@ if st.session_state.nivel_seleccionado is None:
             st.rerun()
         
         st.markdown("""
-        <div style='text-align: center; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
-            <p style='color: #333;'><strong>✅ 75 verbos</strong> (incluye 1º-2º)</p>
+        <div style='text-align: left; padding: 15px; margin-top: 15px; background-color: #f5f5f5; border-radius: 10px;'>
+            <p style='color: #333;'><strong>✅ 80 verbos</strong> (incluye 1º-2º)</p>
             <p style='color: #333;'>✅ Verbos más avanzados</p>
             <p style='color: #333;'>✅ Más experiencia requerida</p>
             <p style='color: #333;'>✅ Verbos menos comunes</p>
